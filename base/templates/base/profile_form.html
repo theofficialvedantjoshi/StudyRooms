@@ -1,0 +1,16 @@
+{% extends 'main.html'%}
+
+{% block content %}
+
+<div class="profile-form">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <label>Nationality</label>
+        {{form.nationality}}
+        <label>Bio</label>
+        {{form.bio}}
+        <input type = "submit" value="Submit" />
+    </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,780 @@
+body{
+    background-color: #0c54b3;
+    font-family: 'proxima-nova', sans-serif;
+    color:#fff
+}
+a{
+    color:#fff;
+}
+/* Navbar container */
+.navbar {
+    background-color: #007BFF; /* Background color */
+    color: #fff; /* Text color */
+    display: grid;
+    grid-template-columns: 10fr 1fr 0.7fr 1fr; /* Added an extra column for the h1 element */
+    padding: 10px 20px; /* Padding on top/bottom and left/right */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    align-items: center; /* Vertically center the content */
+  }
+  
+  /* Navbar heading (logo) */
+  .navbar h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  /* Search input */
+  .navbar input[type="text"] {
+    padding: 8px;
+    margin-right: 20px;
+    background-color:#171c36;
+    color:#d3d7de;
+    border: none;
+    border-radius: 5px;
+    width: 160px; /* Adjusted width to fill the available space */
+    outline: none; /* Remove the input focus outline */
+  }
+  
+  /* Search input placeholder text */
+  .navbar input::placeholder {
+    color: #ccc; /* Placeholder text color */
+  }
+  
+  /* Login and Logout links */
+  .navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth color transition on hover */
+  }
+  
+  /* Change link color on hover */
+  .navbar a:hover {
+    color: #FFA500; /* Hover color */
+  }
+
+/* Sidebar container */
+.sidebar {
+    background-color: #0c54b3;
+    border: 1px solid #0c54b3;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  /* Sidebar title */
+  .sidebar h3 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+  }
+  
+  /* Horizontal line */
+  .sidebar hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+  }
+  
+  /* Topic links */
+  .sidebar a {
+    display: block;
+    padding: 8px 0;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  /* Topic link hover effect */
+  .sidebar a:hover {
+    color: #007BFF;
+  }
+
+/* Feed container */
+.feed {
+    background-color: #0c54b3;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Individual room container */
+  .feed div {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  /* Edit and Delete links for room host */
+  .feed div a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: color 0.3s;
+  }
+  
+  /* Edit and Delete links hover effect */
+  .feed div a:hover {
+    color: #FFA500;
+  }
+  
+  /* Host's username */
+  .feed div a:nth-child(2) {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  .feed div a:nth-child(2):hover {
+    color: #FFA500;
+  }
+  
+  /* Room ID and Name */
+  .feed div h5 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  /* Room name link */
+  .feed div h5 a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  
+  /* Room topic */
+  .feed div small {
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  /* Horizontal line */
+
+
+/* Activity feed container */
+.activity {
+    background-color: #0c54b3;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Activity feed title */
+  .activity h3 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+  }
+  
+  /* Horizontal line */
+  .activity hr {
+    border: none;
+    border-top: 1px solid #d3d7de;
+    margin: 10px 0;
+  }
+  
+  /* Individual activity container */
+  .activity div {
+    margin-bottom: 20px;
+  }
+  
+  /* User link and timestamp */
+  .activity div small {
+    color: #d3d7de;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  /* User link */
+  .activity div small a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin-right: 5px;
+    transition: color 0.3s;
+  }
+  
+  /* User link hover effect */
+  .activity div small a:hover {
+    color: #FFA500;
+  }
+  
+  /* Room name link */
+  .activity div a {
+    text-decoration: none;
+    font-size: small;
+    color: #fff;
+    font-weight: bold;
+    margin-right: 5px;
+    transition: color 0.3s;
+  }
+  
+  /* Room name link hover effect */
+  .activity div a:hover {
+    color: #FFA500;
+  }
+  
+  /* Room message text */
+  .activity div p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  /* Horizontal line within activity container */
+  .activity div hr {
+    border: none;
+    border-top: 1px solid #d3d7de;
+    margin: 10px 0;
+  }
+
+.create{
+    background-color: #0c54b3;
+    padding-top: 25px;
+    padding-left: 20px;
+    border-radius: 1px;
+  }
+.create a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: color 0.3s;
+  }
+  
+  /* Edit and Delete links hover effect */
+  .create a:hover {
+    color: #FFA500;
+}
+
+/* Center the login form on the screen */
+.login-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Form container */
+  .login-register div {
+    background-color: #007BFF;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Form label */
+  .login-register label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Form input */
+  .login-register input[type="text"],
+  .login-register input[type="password"] {
+    width: 300px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  /* Submit button */
+  .login-register input[type="submit"] {
+    background-color: #0c54b3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  /* Submit button hover effect */
+  .login-register input[type="submit"]:hover {
+    background-color: #3f6ebf;
+  }
+  
+  /* "Don't have an account" or "Already have an account" link */
+  .login-register p {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Link color */
+  .login-register a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Link hover effect */
+  .login-register a:hover {
+    text-decoration: underline;
+  }
+
+/* Room container */
+.room-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px; /* Add some spacing between the two columns */
+}
+
+/* Chat room title */
+.room-container h1 {
+  font-size: 24px;
+  padding-top: 20px;
+  margin: 0 0 10px 0;
+}
+
+/* Chat room description */
+.room-container p {
+  color: #fff;
+  font-size: 16px;
+}
+
+/* Conversation wrapper */
+.comment-wrapper {
+  background-color: #0c54b3;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/* Conversation title */
+.comment-wrapper h3 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+/* Horizontal line in the conversation */
+.comment-wrapper hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+/* Individual message container */
+.comment-wrapper div {
+  margin-bottom: 20px;
+}
+
+/* Delete message link */
+.comment-wrapper a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: color 0.3s;
+}
+
+/* Delete message link hover effect */
+.comment-wrapper a:hover {
+  color: #FFA500;
+}
+
+/* User link and timestamp */
+.comment-wrapper small {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* User link */
+.comment-wrapper small a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 5px;
+  transition: color 0.3s;
+}
+
+/* User link hover effect */
+.comment-wrapper small a:hover {
+  color: #FFA500;
+}
+
+/* Message text */
+.comment-wrapper p {
+  margin: 0;
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+/* Horizontal line within message container */
+.comment-wrapper hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+/* Comment form */
+.comment-form {
+  background-color: #0c54b3;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/* Send a message title */
+.comment-form h3 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+/* Message input */
+.comment-form input[type="text"] {
+  width: 900px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Participants container */
+.room-container div:nth-child(2) {
+  background-color: #0c54b3;
+  
+  padding: 20px;
+}
+
+/* Participants title */
+.room-container h3 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+/* Horizontal line in participants container */
+.room-container div:nth-child(2) hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+/* Individual participant link */
+.room-container div:nth-child(2) a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  transition: color 0.3s;
+}
+
+/* Participant link hover effect */
+.room-container div:nth-child(2) a:hover {
+  color: #FFA500;
+}
+
+/* Center the content on the page */
+.delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #0c54b3;
+}
+
+/* Form container */
+.delete form {
+  text-align: center;
+  background-color: #007BFF;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Confirmation message */
+.delete form h1 {
+  font-size: 24px;
+  margin: 0 0 20px 0;
+}
+
+/* Go back link */
+.delete form a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Delete button */
+.delete form input[type="submit"] {
+  background-color: #FFA500;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+/* Delete button hover effect */
+.delete form input[type="submit"]:hover {
+  background-color: #FF2400;
+}
+.delete form a:hover {
+  color: #2fc448;
+}
+
+/* Form container */
+.room-form {
+  text-align: center;
+  background-color: #007BFF;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  width: 320px;
+  margin: 0 auto; /* Center the form horizontally */
+  margin-top: 10vh; /* Adjust the top margin for vertical centering */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Form label */
+.room-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding-top: 10px;
+}
+
+/* Form input fields */
+.room-form input[type="text"] {
+  width: 200px;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Form submit button */
+.room-form input[type="submit"] {
+  background-color: #63cd48;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+/* Form submit button hover effect */
+.room-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+/* Style the select input */
+.room-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Style the dropdown arrow (optional) */
+.room-form select::-ms-expand {
+  display: none; /* Hide the default arrow in IE */
+}
+
+/* Style the options within the dropdown */
+.room-form select option {
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Style the hover effect for options (optional) */
+.room-form select option:hover {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+/* Form container */
+.register-form {
+  text-align: center;
+  background-color: #007BFF;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  width: 320px;
+  margin: 0 auto; /* Center the form horizontally */
+  margin-top: 10vh; /* Adjust the top margin for vertical centering */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Form label */
+.register-form label {
+  padding-top: 10px;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Form input fields */
+.register-form input[type="text"],
+.register-form input[type="password"] {
+  width: 300px;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Submit button */
+.register-form input[type="submit"] {
+  background-color: #3dde58;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Submit button hover effect */
+.register-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* "Already have an account" link */
+.register-form p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Link color */
+.register-form a {
+  color: #0c54b3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Link hover effect */
+.register-form a:hover {
+  text-decoration: underline;
+}
+
+/* Profile container */
+.profile {
+  background-color: #0c54b3;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  width: 97%;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* User's name and nationality */
+.profile h1 {
+  font-size: 24px;
+  margin: 0 0 10px 0;
+}
+
+/* "Update Profile" link */
+.profile h2 a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+  padding-bottom: 20px;
+}
+
+/* "Update Profile" link hover effect */
+.profile a:hover {
+  color: #20c953;
+}
+
+/* User's bio */
+.profile h3 {
+  margin: 20px 0;
+  font-size: 18px;
+  color: #fff;
+}
+.profile-form {
+  text-align: center;
+  background-color: #007BFF;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  width: 320px;
+  margin: 0 auto; /* Center the form horizontally */
+  margin-top: 10vh; /* Adjust the top margin for vertical centering */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Form label */
+.profile-form label {
+  padding-top: 10px;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Form input fields */
+.profile-form input[type="text"],
+.profile-form input[type="password"] {
+  width: 300px;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Submit button */
+.profile-form input[type="submit"] {
+  background-color: #3dde58;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Submit button hover effect */
+.profile-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* "Already have an account" link */
+.profile-form p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Link color */
+.profile-form a {
+  color: #0c54b3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Link hover effect */
+.profile-form a:hover {
+  text-decoration: underline;
+}
