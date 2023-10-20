@@ -6,11 +6,17 @@
  WEB APP STRUCTURE:
 
  1.)NAVBAR containing LOGO, Search bar, Login/Logout link, Profile link.
+ 
  2.)SIDEBAR containing Topics the rooms use.
+ 
  3.)FEED containing created study rooms by users and options to edit or delete and create new study rooms.
+ 
  4.)ACTIVITY PAGE containing recent messages sent by users in different rooms sorted by time and containing the links of user and room.
+ 
  5.)LOGIN, REGISTERATION, TOPIC, ROOM, PROFILE UPDATE FORMS.
+ 
  6.)ROOM PAGE containing the description and name of room and a thread app where users can interact and send messages.
+ 
  7.)PROFILE PAGE containg users nationality, bio and profile pic with all their rooms and messages.
 
  FRONT END DONE USING HTML/CSS:
